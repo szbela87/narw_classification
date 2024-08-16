@@ -1,27 +1,29 @@
 # NARW classification
+Code repository to the manuscript:
+**Comparative analysis of deep neural networks for accurate
+classification of North Atlantic Right Whale Calls: A case
+study of single models and stacking methods**
  
 ## Project Description
-The current study focuses on a comparative analysis of various deep learning architectures, namely MobileNetV2, DenseNet-121, ResNet-9, and CF-ResNet-9. The primary objective is to evaluate the performance of these models in classifying whale vocalizations in underwater audio recordings.
+The North Atlantic Right Whale (NARW) is a critically endangered species, necessitating effective
+monitoring and conservation strategies. This study evaluates various convolutional neural network architectures for classifying NARW vocalizations, focusing on DenseNet-121, MobileNetV2, ResNet-9, and CFResNet-9 architectures. DenseNet-121 demonstrates superior performance with a test accuracy of 92.79% and a recall rate of 91.71%. In contrast, the Small CFResNet-9-16 model is highly efficient, achieving a test accuracy of 90.97%, while it is 62.3% smaller and requires 82.7% less training time. Furthermore, we employ simple stacking techniques on the two best-performing models, DenseNet-121 and Small CF-ResNet-9-16, using 5-fold cross-validation. This approach leverages the strengths of individual models, resulting in a stacked model that achieves a stateof-the-art test accuracy of 93.26% and a recall of 90.93%, surpassing all single model performances.
+These findings significantly contribute to the development of robust methods for accurate
+classification of NARW calls, thereby aiding in the monitoring and conserving of this endangered
+species.
 
 ## Getting Started
 ### Environment Requirements
 
-First, please make sure you have installed Conda. Then, our environment can be installed by:
+First, please make sure you have installed Conda. Then, the environment can be installed by:
 ```
 conda create -n insect_classification python=3.8
 conda activate insect_classification
 pip install -r requirements.txt
 ```
 
-**Important note:**
-If you have and older GPU, i.e., a TESLA P4 then install an older PyTorch version:
-```
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 torchaudio==0.12.1 --extra-index-url https://download.pytorch.org/whl/cu113
-```
-
 ### Data Preparation
 
-You can obtain all the three datasets from [Google Drive](https://drive.google.com/drive/folders/1ZqaPd78kNRLBjmkWNEM8420NWllfmdkM?usp=sharing).
+You can obtain all the three datasets from [Google Drive](https://drive.google.com/drive/folders/1b2Jph_sFOuSLA0xMeiTpZgLIU1S1ixwZ?usp=sharing).
 
 ```
 mkdir data
@@ -31,21 +33,31 @@ mkdir data
 
 
 ### Training Example
-In the different directories, we provide the training scripts, i.e. for the *Whale* dataset and the large *ResNet9* model can be found
-at `./whale_densenet121`. These directories are:
-* `whale_densenet121`
-* `whale_large-16_cf-resnet9`
-* `whale_large_resnet9`
-* `whale_mobilenetv2`
-* `whale_small-16_cf-resnet9`
-* `whale_small-64_cf-resnet9`
-* `whale_small_resnet9`
+In the different directories, we provide the training and evaluation notebooks. 
 
-The `small`/`large` words in the folder names indicate that the small/large *cf-resnet9* models were used on the corresponding dataset.
+For the single models, these directories are:
+* `densenet_augm`
+* `densenet_no_augm`
+* `mobilenet_augm`
+* `mobilenet_no_augm`
+* `small_resnet-9_augm`
+* `small_resnet-9_no_augm`
+* `large_resnet-9_augm`
+* `large_resnet-9_no_augm`
+* `small_cf-resnet-9-16_augm`
+* `small_cf-resnet-9-16_no_augm`
+* `small_cf-resnet-9-64_augm`
+* `small_cf-resnet-9-64_no_augm`
+* `large_cf-resnet-9-16_augm`
+* `large_cf-resnet-9-16_no_augm`
+
+For the stacked models, these directories are:
+* `densenet_augm_stacking`
+* `densenet_no_augm_stacking`
+* `small_cf-resnet-9-16_augm_stacking`
+* `small_cf-resnet-9-16_no_augm_stacking`
 
 Each training script produces 5 training sessions.
-
-
 
 The output files, i.e. the best models and logs are in the `./whale_densenet121/results` directory after the training, these are:
 * `best_model_{i}.pt` - the model with best validation accuracy from the i-th training,
@@ -58,15 +70,14 @@ Here, $i=0...4$.
 To evaluate these results, and evaluate the `best_model_{i}`, $i=0...4$ models on the test set use the following command:
  
 It requires the files
-`best_model_{i}.pt`, `inrun_results_{i}.csv`, `train_results_{i}.csv`, `valid_results_{i}.csv` for $i=0...4$ from the `results` available at [Google Drive](https://drive.google.com/drive/folders/1AVMsFHhytCohFgKaHfgesluDrLhLfnTa?usp=sharing), the file which contains evaluation metrics achieved by the model with the highest validation accuracy. 
+`best_model_{i}.pt`, `inrun_results_{i}.csv`, `train_results_{i}.csv`, `valid_results_{i}.csv` for $i=0...4$ from the `results` available at [Google Drive](https://drive.google.com/drive/folders/1OBI0CsXWovm1bjQyb7mOEhUxVMQ0oB1f?usp=sharing), the file which contains evaluation metrics achieved by the model with the highest validation accuracy. 
  
 
 ## Best Models
 
-The trained models are available at [Google Drive](https://drive.google.com/drive/folders/1AVMsFHhytCohFgKaHfgesluDrLhLfnTa?usp=sharing).
-Further results are available at [Results.md](https://github.com/alargum/whale_vocalization_classification/blob/main/Results.md).
+The trained models are available at [Google Drive](https://drive.google.com/drive/folders/1OBI0CsXWovm1bjQyb7mOEhUxVMQ0oB1f?usp=sharing).
 
 ## About the datasets
 
-The descriptions of how to generate the data files for the trainings and the tests can be found in the `create_datasets` directory, i. e. [./create_datasets/Data_Readme.md](https://github.com/alargum/whale_vocalization_classification/blob/main/create_dataset/Data_README.md)
+The descriptions of how to generate the data files for the trainings and the tests can be found in the `create_datasets` directory, i. e. [./create_datasets/Data_Readme.md](https://github.com/szbela87/narw_classification/blob/main/create_dataset/Data_README.md)
  
