@@ -34,9 +34,9 @@ mkdir data
 
 
 ### Training Example
-In the different directories, we provide the training and evaluation notebooks. 
+In each directory, we provide the training and evaluation notebooks. 
 
-For the single models, these directories are:
+For the single models, these directories are corresponding the models according to the manuscript:
 * `densenet_augm`
 * `densenet_no_augm`
 * `mobilenet_augm`
@@ -58,9 +58,11 @@ For the stacked models, these directories are:
 * `small_cf-resnet-9-16_augm_stacking`
 * `small_cf-resnet-9-16_no_augm_stacking`
 
+The suffixes `augm` and `no_augm` at the end of the library names indicate whether augmentation was applied or not.
+
 Each training script produces 5 training sessions.
 
-The output files, i.e. the best models and logs are in the `./whale_densenet121/results` directory after the training, these are:
+The output files, i.e. the best models and logs for the DenseNet-121 model are in the `./densenet_augm/results` directory after the training, these are:
 * `best_model_{i}.pt` - the model with best validation accuracy from the i-th training,
 * `inrun_results_{i}.csv` - the results during the training by the i-th training (just for logging),
 * `train_results_{i}.csv` - the training results corresponding to the i-th training process,
@@ -68,7 +70,7 @@ The output files, i.e. the best models and logs are in the `./whale_densenet121/
 
 Here, $i=0...4$.
 
-To evaluate these results, and the `best_model_{i}`, $i=0...4$ models on the test set use the `*_eval.ipynb` notebooks in the corresponding directory.
+To evaluate these results, and the `best_model_{i}`, $i=0...4$ models on the testing set use the `*_eval.ipynb` notebooks in the corresponding directory.
  
 ## Best Models
 
