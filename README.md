@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ### Data Preparation
 
-You can obtain all the three datasets from [Google Drive](https://drive.google.com/drive/folders/1b2Jph_sFOuSLA0xMeiTpZgLIU1S1ixwZ?usp=sharing).
+You can obtain the dataset from [Google Drive](https://drive.google.com/drive/folders/1b2Jph_sFOuSLA0xMeiTpZgLIU1S1ixwZ?usp=sharing).
 
 ```
 mkdir data
@@ -67,12 +67,8 @@ The output files, i.e. the best models and logs are in the `./whale_densenet121/
 
 Here, $i=0...4$.
 
-To evaluate these results, and evaluate the `best_model_{i}`, $i=0...4$ models on the test set use the following command:
+To evaluate these results, and the `best_model_{i}`, $i=0...4$ models on the test set use the `*_eval.ipynb` notebooks in the corresponding directory.
  
-It requires the files
-`best_model_{i}.pt`, `inrun_results_{i}.csv`, `train_results_{i}.csv`, `valid_results_{i}.csv` for $i=0...4$ from the `results` available at [Google Drive](https://drive.google.com/drive/folders/1OBI0CsXWovm1bjQyb7mOEhUxVMQ0oB1f?usp=sharing), the file which contains evaluation metrics achieved by the model with the highest validation accuracy. 
- 
-
 ## Best Models
 
 The trained models are available at [Google Drive](https://drive.google.com/drive/folders/1OBI0CsXWovm1bjQyb7mOEhUxVMQ0oB1f?usp=sharing).
