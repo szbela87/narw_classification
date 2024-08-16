@@ -74,7 +74,7 @@ To evaluate these results, and the `best_model_{i}`, $i=0...4$ models on the tes
 
 The trained models are available at [Google Drive](https://drive.google.com/drive/folders/1OBI0CsXWovm1bjQyb7mOEhUxVMQ0oB1f?usp=sharing).
 
-## About the datasets
+## About the dataset
 
-The descriptions of how to generate the data files for the trainings and the tests can be found in the `create_datasets` directory, i. e. [./create_datasets/Data_Readme.md](https://github.com/szbela87/narw_classification/blob/main/create_dataset/Data_README.md)
+The descriptions of how to generate the `.csv` files for the training and the testing set can be found in the `create_datasets` directory, i. e. [./create_datasets/Data_Readme.md](https://github.com/szbela87/narw_classification/blob/main/create_dataset/Data_README.md)
  
