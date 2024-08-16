@@ -1,8 +1,8 @@
-# Creating the data files
+# The *RightWhaleCalls* dataset
 
 You can obtain the generated `.csv` files for the training and the test sets from [Google Drive](https://drive.google.com/drive/folders/1b2Jph_sFOuSLA0xMeiTpZgLIU1S1ixwZ?usp=sharing).
 
-## The *RightWhaleCalls* dataset
+## Creating the data files
 
 The dataset was downloaded from [timeseriesclassification.com](https://www.timeseriesclassification.com/description.php?Dataset=RightWhaleCalls). 
 
