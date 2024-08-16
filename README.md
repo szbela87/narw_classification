@@ -1,5 +1,6 @@
 # NARW classification
-Code repository to the manuscript:
+This is the code repository to the manuscript:
+
 **Comparative analysis of deep neural networks for accurate
 classification of North Atlantic Right Whale Calls: A case
 study of single models and stacking methods**
