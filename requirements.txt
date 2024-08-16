@@ -11,3 +11,4 @@ soundfile
 torch
 torchvision
 torchaudio
+jupyter
