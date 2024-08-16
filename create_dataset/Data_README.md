@@ -2,7 +2,7 @@
 
 You can obtain the generated `.csv` files for the training and the test sets from [Google Drive](https://drive.google.com/drive/folders/1b2Jph_sFOuSLA0xMeiTpZgLIU1S1ixwZ?usp=sharing).
 
-## The *Whale* dataset
+## The *RightWhaleCalls* dataset
 
 The dataset was downloaded from [timeseriesclassification.com](https://www.timeseriesclassification.com/description.php?Dataset=RightWhaleCalls). 
 
