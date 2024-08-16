@@ -7,7 +7,7 @@ You can obtain the generated `.csv` files for the training and the test sets fro
 
 ## Creating the `.csv` files for the numerical experiments
 
-The dataset includes 10,934 instances for training and 1,962 instances for testing. Each instance is a two-second audio segment sampled at a rate of 2 kHz, resulting in a series length 4000. The dataset was subdivided into training, validation, and testing sets with proportions of 60%, 20%, and 20%, respectively.
+The dataset includes 10,934 instances for training and 1,962 instances for testing. Each instance is a two-second audio segment sampled at a rate of 2 kHz, resulting in a series length 4000.
 
 To create the `.csv` files according to the 60/20/20% training/validation/test splitting, just run the 'load_data.ipynb' file. 
 
