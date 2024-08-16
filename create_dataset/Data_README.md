@@ -4,7 +4,7 @@ You can obtain the generated `.csv` files for the training and the test sets fro
 
 ## Creating the data files
 
-The dataset was downloaded from [timeseriesclassification.com](https://www.timeseriesclassification.com/description.php?Dataset=RightWhaleCalls). 
+The origional dataset is available at [timeseriesclassification.com](https://www.timeseriesclassification.com/description.php?Dataset=RightWhaleCalls). 
 
 The dataset includes 10,934 instances for training and 1,962 instances for testing. Each instance is a two-second audio segment sampled at a rate of 2 kHz, resulting in a series length 4000. The dataset was subdivided into training, validation, and testing sets with proportions of 60%, 20%, and 20%, respectively.
 
